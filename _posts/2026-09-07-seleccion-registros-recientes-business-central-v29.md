@@ -3,7 +3,7 @@ title: "Registros recientes en el selector de Business Central v29: menos clics 
 date: 2026-09-07 10:00:00 +0200
 categories: [Business Central, Funcional]
 tags: [business-central, v29, productividad, ux, novedades]
-description: "Una novedad pequeña de la preview de Business Central v29; el desplegable de selección de un registro ahora puede quedarse mostrando los usados recientemente en lugar de volver siempre al listado completo."
+description: "Una novedad pequeña de la preview de Business Central v29; el desplegable de selección de un registro ahora puede quedarse mostrando los usados recientemente en lugar de volver siempre al listado completo, y el buscador global hace lo mismo con las búsquedas."
 image:
   path: 01-recent-boton-lookup.png
   alt: Línea de un pedido de venta con el botón Recientes resaltado en el desplegable de selección de artículo
@@ -36,14 +36,24 @@ Y aquí está lo interesante: el desplegable **guarda esa selección**. No vuelv
 > Todavía no tengo claro si "recientes" se calcula por usuario, por tabla o por combinación de campo y tabla, ni cuántos registros guarda. Lo iré confirmando a medida que avance la preview.
 {: .prompt-tip }
 
+## También en el buscador global
+
+La misma idea no se queda en los campos de línea. El buscador global de Business Central —el que usas para saltar a una página, una lista o una zona de administración— también incorpora ahora un apartado **Recientes**: al abrirlo, antes de escribir nada, te muestra los últimos accesos, con su tipo (Listas, Administración...) junto al nombre.
+
+![Buscador global de Business Central abierto con la sección Recientes mostrando Clientes, Pedidos venta y Capacidades de Copilot y agente](04-buscador-global-recientes.png){: w="1796" h="387" .shadow }
+*El buscador global también recuerda tus últimos accesos, no solo los registros de un campo.*
+
+Es el mismo criterio aplicado a un sitio distinto: si la mayoría de tus búsquedas en una sesión se repiten —las mismas páginas de administración, las mismas listas de trabajo—, tenerlas ahí sin escribir nada ahorra el mismo tipo de clics que ya comentaba con los campos de línea.
+
 ## Por qué importa en el día a día
 
-Es una funcionalidad pequeña, pero encaja bien con cómo se trabaja realmente en Business Central: la mayoría de sesiones de captura —pedidos, facturas, diarios— se repiten sobre un conjunto reducido de registros. Que el desplegable se quede en Recientes línea tras línea, en lugar de volver al listado completo cada vez, se nota especialmente en:
+Es una funcionalidad pequeña, pero encaja bien con cómo se trabaja realmente en Business Central: la mayoría de sesiones de captura —pedidos, facturas, diarios— se repiten sobre un conjunto reducido de registros, y lo mismo pasa con las páginas y listas a las que saltas una y otra vez. Que el desplegable y el buscador se queden en Recientes, en lugar de volver al listado completo cada vez, se nota especialmente en:
 
 - **Captura de pedidos recurrentes**, donde se repiten los mismos artículos o clientes de un pedido a otro.
 - **Catálogos grandes**, donde abrir el listado completo tiene un coste de carga y de scroll nada despreciable.
 - **Usuarios de negocio** que no memorizan códigos y hasta ahora dependían de escribir bien la descripción para encontrar lo que buscaban.
+- **Navegación diaria**, saltando entre las mismas páginas de administración o listas de trabajo sin tener que teclear el nombre cada vez.
 
 ## Conclusión y recomendación
 
-Como toda funcionalidad en preview, conviene probarla en un entorno de test antes de dar por sentado su comportamiento final. Pero si tu proyecto tiene captura intensiva de líneas —pedidos, diarios, presupuestos— merece la pena tenerla en el radar cuando v29 llegue a producción, porque es de esas mejoras que no cambian ningún proceso pero sí el número de clics que hacen tus usuarios cada día.
+Como toda funcionalidad en preview, conviene probarla en un entorno de test antes de dar por sentado su comportamiento final. Pero si tu proyecto tiene captura intensiva de líneas —pedidos, diarios, presupuestos— o usuarios que saltan constantemente entre las mismas páginas, merece la pena tenerla en el radar cuando v29 llegue a producción, porque es de esas mejoras que no cambian ningún proceso pero sí el número de clics que hacen tus usuarios cada día.
