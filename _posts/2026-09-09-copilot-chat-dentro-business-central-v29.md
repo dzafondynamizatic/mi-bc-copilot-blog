@@ -1,6 +1,6 @@
 ---
 title: "Copilot Chat por fin dentro de Business Central"
-date: 2026-09-09 10:00:00 +0200
+date: 2026-09-09 09:00:00 +0200
 categories: [Business Central, Copilot]
 tags: [business-central, copilot, asistente-virtual, novedades]
 description: La vista previa pública de la 2026 release wave 2 (Update 29.0) trae un chat de Microsoft Copilot rediseñado e integrado en Business Central; así es el cambio y qué implica para partners y usuarios.
@@ -25,15 +25,22 @@ La nueva experiencia de chat moderniza el panel, simplifica la navegación y ado
 ![Antes: panel de chat heredado en Business Central v28](02-copilot-chat-anterior-v28.png){: w="1821" h="909" .shadow }
 _El panel de chat que conocíamos hasta la v28_
 
-![Después: nueva experiencia de chat de Microsoft Copilot en Business Central v29](01-copilot-chat-nuevo-v29.png){: w="1875" h="895" .shadow }
+![Después: nueva experiencia de chat de Microsoft Copilot en Business Central v29](01-copilot-chat-nuevo-v29.png){: w="1853" h="852" .shadow }
 _La nueva experiencia de chat de Microsoft Copilot en v29_
 
-El cambio visual es evidente, pero lo relevante es que ya no hace falta reaprender nada: los mismos patrones de Copilot que usas en Outlook o en Teams se aplican ahora a los datos y procesos de Business Central.
+El cambio visual es evidente, pero lo relevante es que ya no hace falta reaprender nada: el Copilot que ya usas en Outlook o en Teams se comporta igual dentro de Business Central.
 
-> Para verlo con mis propios ojos he tenido que montar un sandbox de Estados Unidos: en mi entorno de España, al menos de momento, el chat nuevo todavía no aparece. Si te pasa lo mismo, no des por hecho que tienes algo mal configurado; es cuestión de que el despliegue llegue a tu región.
+> Cuando escribí esto por primera vez tuve que montar un sandbox de Estados Unidos para verlo, porque en mi entorno de España el chat nuevo todavía no aparecía. Unos días después ya se ha desplegado también aquí, y la captura de arriba es de mi propio BC29 en español. Si a ti todavía no te sale, dale unos días: el despliegue va por regiones y no llega a todas a la vez.
 {: .prompt-tip }
 
 Para mí es un salto de calidad muy grande, y no es un cambio aislado: va en línea con la unificación que Microsoft lleva tiempo empujando para que el chat de Copilot sea el mismo, con la misma cara y el mismo comportamiento, en todas sus herramientas.
+
+Y no se queda solo en el aspecto: en el menú superior del chat aparecen capacidades que hasta ahora solo tenías en el Copilot de Microsoft 365 fuera de Business Central. Puedes elegir el ámbito de búsqueda entre tu organización o la web (los iconos de maletín y globo), y hay un selector de modelo con tres opciones: Automático, GPT y Claude.
+
+![Menú del chat de Microsoft Copilot en Business Central v29 con el selector de modelo y el ámbito de búsqueda](03-copilot-chat-menu-modelo.png){: w="729" h="742" .shadow }
+_Selector de modelo (Automático, GPT, Claude) y ámbito de búsqueda (organización o web) en el menú del chat_
+
+A esto se suman opciones que hasta ahora no existían dentro de Business Central: abrir la conversación en la propia aplicación de M365 Copilot, consultar páginas recientes, programar mensajes o enviar comentarios directamente desde el chat. Ya no es una versión reducida de Copilot metida a presión en Business Central; es el mismo Copilot, con todo lo que trae, aplicado a tus datos.
 
 ## Licencias: quién ve qué
 
@@ -45,7 +52,21 @@ Para un proyecto de implantación esto tiene una lectura práctica: el salto de 
 
 Para ver la nueva experiencia necesitas un entorno de acceso anticipado con la versión 29, y conviene que sea una compilación reciente: recién aprovisionada o actualizada con la versión de plataforma 29.0.53497 o posterior. Si el entorno cumple esa condición, el chat nuevo sustituye automáticamente al heredado, sin configuración adicional.
 
+Otra cosa a tener en cuenta: que el chat tenga la interfaz nueva no significa que todo funcione a la primera. En mi entorno de España, al pedirle "Muéstrame mis pedidos de venta abiertos más urgentes" (una de las sugerencias de la propia pantalla de bienvenida), Copilot me contestó que no podía consultar los datos porque la capacidad Chat estaba desactivada, y me remitió a la página **Capacidades de Copilot y agente** para activarla.
+
+![Copilot en Business Central pidiendo activar la capacidad Chat, que en la página Capacidades de Copilot y agente ya aparece como Activa](04-copilot-chat-capacidad-desactivada.png){: w="1871" h="860" .shadow }
+_Copilot pide activar la capacidad Chat... que en esa misma página ya figura como Activa_
+
+El problema es que, una vez en esa página, Chat ya aparece como **Activo**: no hay ningún interruptor pendiente ni nada que un administrador pueda hacer para "reactivarla". Todo apunta a un fallo de esta vista previa en concreto, no a un paso de configuración real que se te esté escapando.
+
+> Si el chat te pide activar una capacidad que en Capacidades de Copilot y agente ya figura como Activa, no le des más vueltas buscando qué has dejado sin marcar: es un fallo conocido de esta preview, no un error de configuración tuyo.
+{: .prompt-warning }
+
 > El proyecto sigue en desarrollo activo. Microsoft ha sido explícito en que la experiencia todavía se está afinando, así que es esperable ver ajustes de comportamiento y de interfaz entre esta vista previa y la disponibilidad general.
 {: .prompt-info }
 
 Si trabajas con clientes que ya usan Copilot en otras aplicaciones de Microsoft 365, te recomiendo activar esta vista previa en un entorno de pruebas cuanto antes. Es la mejor forma de llegar a la disponibilidad general con criterio propio sobre qué comunicar al cliente, en lugar de descubrir el cambio el mismo día que se publica.
+
+> **Documentación de Microsoft**
+> - [Detalles de la función en vista previa: Copilot and agents; enable unified Copilot Chat experience consistent with Microsoft Copilot](https://learn.microsoft.com/es-es/dynamics365/business-central/dev-itpro/whatsnew/preview-feature-details?wt.mc_id=DX-MVP-5004336#copilot-and-agents-enable-unified-copilot-chat-experience-consistent-with-microsoft-copilot)
+{: .prompt-info }
