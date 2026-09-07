@@ -1,6 +1,6 @@
 ---
 title: "Registros recientes en el selector de Business Central v29: menos clics para elegir artículo, cliente o cuenta"
-date: 2026-09-07 10:00:00 +0200
+date: 2026-09-07 00:00:00 +0200
 categories: [Business Central, Funcional]
 tags: [business-central, v29, productividad, ux, novedades]
 description: "Una novedad pequeña de la preview de Business Central v29; el desplegable de selección de un registro ahora puede quedarse mostrando los usados recientemente en lugar de volver siempre al listado completo, y el buscador global hace lo mismo con las búsquedas."
